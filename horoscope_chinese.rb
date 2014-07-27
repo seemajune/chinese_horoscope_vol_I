@@ -46,8 +46,42 @@
 #   end
 # end
 
-def horoscope(year)
+def astro_sign_generator(year)
   case year
-    when 
- 
+     when 1912 || (year.to_i)-(1912).modulo(12) == 0
+       "Rat."
+      when 1913 || (year.to_i)-(1913).modulo(12) == 0
+       "Ox."
+      when 1914 || (year.to_i)-(1914).modulo(12) == 0
+       "Tiger."
+      when 1915 || (year.to_i)-(1915).modulo(12) == 0
+       "Rabbit."
+      when 1916 || (year.to_i)-(1916).modulo(12) == 0
+         "Dragon."
+      when 1917 || (year.to_i)-(1917).modulo(12) == 0
+        "Snake."
+      when 1918 || (year.to_i)-(1918).modulo(12) == 0
+        "Horse."
+      when 1919 || (year.to_i)-(1919).modulo(12) == 0
+        "Sheep."
+      when 1920 || (year.to_i)-(1920).modulo(12) == 0
+        "Monkey."
+      when 1921 || (year.to_i)-(1921).modulo(12) == 0
+        "Rooster."
+      when 1922 || (year.to_i)-(1922).modulo(12) == 0
+        "Dog."
+      when 1923 || (year.to_i)-(1923).modulo(12) == 0
+        "Pig."
+
+      else 
+        "Please enter a valid birth year. No information is provided for the year you entered."
+  end
+end
+
+puts "Please enter your birth year"
+year = gets.chomp
+puts "You are a #{astro_sign_generator(year)}"
+
+
+
     
