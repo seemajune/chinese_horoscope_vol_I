@@ -29,9 +29,21 @@ def astro_sign_generator(year)
   end
 end
 
-puts "Please enter your birth year"
+puts "Please enter your birth year, or press command+shift+Q to exit."
 year = gets.chomp
-puts astro_sign_generator(year.to_i)
+
+  if year == "Q"
+   exit
+
+    elsif year.to_i < 1912 
+      puts "Please enter a true birth year. There is no way you are that old."
+      year = gets.chomp
+      puts "You are a #{astro_sign_generator(year.to_i)}"
+    
+    else year.to_i >= 1912
+     
+      puts "You are a #{astro_sign_generator(year.to_i)}"
+  end
 
 
 
